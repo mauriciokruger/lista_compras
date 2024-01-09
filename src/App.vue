@@ -68,8 +68,8 @@ export default {
       items: JSON.parse(localStorage.getItem('items')) || [],
       modal: false,
       nome: '',
-      quantidade: 0,
-      valor: 0
+      quantidade: '',
+      valor: ''
     };
   },
   methods: {
@@ -112,8 +112,8 @@ export default {
     resetForm() {
       this.modal = false
       this.nome = ''
-      this.quantidade = 0
-      this.valor = 0
+      this.quantidade = ''
+      this.valor = ''
     },
     getTotal() {
       return this.items.reduce((total, item) => total + item.valorTotal, 0)
